@@ -131,15 +131,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className = "Holder">
-          {/* <Text words = {[["世", 3000, 5500], ["界", 3300, 5500], ["上", 3600, 5500]]} time = {this.state.time}/>
-          <Text words = {[["最", 8000, 11600], ["最", 8300, 11100], ["最", 8600, 11600], ["最", 8900, 11100], ["最", 9200, 11600]]} time = {this.state.time}/>
-          <Text words = {[["最", 13600, 16100], ["好", 13600, 15800], ["的", 13600, 15500]]} time = {this.state.time}/>
-          <Text words = {[["逯", 18600, 21100], ["老", 18900, 21100], ["师", 19200, 21100]]} time = {this.state.time}/>
-          <Text words = {[["生", 23600, 26700], ["日", 23600, 26700], ["快", 23900, 27000], ["乐", 23900, 27000], ["了", 24200, 27300], ["啦", 24200, 27300]]} time = {this.state.time}/>
-          <Text words = {[["🎂", 30100, 33600], ["🎂", 29800, 33600], ["🎂", 30100, 33600]]} time = {this.state.time}/>
-          <Text words = {[["🎉", 36700, 39200], ["🎉", 36400, 39500], ["🥳", 36100, 39800], ["🎉", 36400, 39500], ["🎉", 36700, 39200]]} time = {this.state.time}/>
-          <Text words = {[["宝", 42300, 49000], ["宝", 42300, 48700], ["🥰", 43400, 48400], ["我", 42600, 48400], ["爱", 42600, 48700], ["你", 42600, 49000]]} time = {this.state.time}/>
-          <Text words = {[["😘", 49000, 52000], ["啵", 49000, 52000], ["啵", 49000, 52000], ["！", 49000, 52000]]} time = {this.state.time}/> */}
           <div className = "WhiteKeyHolder">
             <Piano keyValue = {16} name = "C" type = {WHITE} running = {this.state.running} time = {this.state.time} auto = {this.state.auto} sheet = {this.state.sheet}/>
             <Piano keyValue = {18} name = "D" type = {WHITE} running = {this.state.running} time = {this.state.time} auto = {this.state.auto} sheet = {this.state.sheet}/>
