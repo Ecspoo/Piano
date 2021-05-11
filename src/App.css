@@ -1,38 +1,281 @@
+body {
+  background-color: #FFF0F3;
+}
+
 .App {
+  background-color: #00000000;
+}
+
+.Track {
+  margin-top: -900px;
+  /* background: linear-gradient(white, white 89.8%, rgba(0, 0, 0, 0) 89.9%, rgba(0, 0, 0, 0));; */
+}
+
+.ForMobile {
+  display: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.WhiteKey {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 200px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.WhiteKey:hover {
+  background-color: #f0f0f0;
+  height: 201px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.WhiteKey_active {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 203px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  color: black;
+}
+
+.WhiteKey_active:hover {
+  background-color: #f0f0f0;
+}
+
+.WhiteKey:hover .Track {
+  background: linear-gradient(#d690a555, #c8b27655 89%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0));
+}
+
+.WhiteKey_active:hover .Track {
+  background: linear-gradient(#d690a555, #c8b27655 89%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0));
+}
+
+.BlackKey {
+  position: relative;
+  float: left;
+  width: 15px;
+  height: 160px;
+  background-color: black;
+  box-sizing: border-box;
+  border: 1px solid gray;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.BlackKey:hover {
+  background-color: #333333;
+  height: 161px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.BlackKey_active {
+  position: relative;
+  float: left;
+  width: 15px;
+  height: 163px;
+  background-color: black;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  color: white;
+}
+
+.BlackKey_active:hover {
+  background-color: #333333;
+}
+
+.BlackKey:hover .Track {
+  background: linear-gradient(#c8b27655, #d690a555 89%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0));
+}
+
+.BlackKey_active:hover .Track {
+  background: linear-gradient(#c8b27655, #d690a555 89%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0));
+}
+
+.EmptyBlackKey {
+  float: left;
+  width: 15px;
+  box-sizing: border-box;
+  height: 1px;
+}
+
+.KeyName {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+}
+
+.Holder {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.WhiteKeyHolder {
+  text-align: center;
+  width: fit-content;
+  height: 0;
+  float: left;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.BlackKeyHolder {
+  text-align: center;
+  width: fit-content;
+  height: 0;
+  float: left;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.ButtonHolder {
+  text-align: center;
+  width: fit-content;
+  height: 0;
+  float: left;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 450px;
+  bottom: 0;
+  position: absolute;
+}
+
+.TextHolder {
+  text-align: center;
+  margin: auto;
+  font-size: 66px;
+  color: #6D63AD;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 520px;
+  height: 0;
+  position: absolute;
+  z-index: 100;
+}
+
+.WordHolder {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.WordHidden {
+  position: relative;
+  top: 88px;
+}
+
+.WordHidding {
+  position: relative;
+  top: 88px;
+  animation: hideword 1.2s;
+}
+
+.WordShown {
+  position: relative;
+  top: 0px;
+  animation: showword 1.2s;
+}
+
+@keyframes showword {
+  0% {top: 88px;}
+  100% {top: 0;}
+}
+
+@keyframes hideword {
+  0% {top: 0;}
+  100% {top: 88px;}
+}
+
+.Button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.Button:hover {
+  top: 1px;
+}
+
+.Button:active {
+  top: 3px;
+}
+
+.switchOn {
+  animation: switchon 0.3s;
+  fill: #abc660;
+}
+
+.switchOff {
+  animation: switchoff 0.3s;
+  fill: #fa504a;
+}
+
+.switchHolderOn {
+  width: 30px;
+  height: 30px;
+  left: 20px;
+  top: 0;
+  position: absolute;
+  animation: switchholderon 0.3s;
+}
+
+.switchHolderOff {
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: 0;
+  position: absolute;
+  animation: switchholderoff 0.3s;
+}
+
+@keyframes switchon {
+  0% {fill: #fa504a; left: 20px;}
+  100% {fill: #abc660}
+}
+
+@keyframes switchoff {
+  0% {fill: #abc660}
+  100% {fill: #fa504a; left: 20px;}
+
+}
+
+@keyframes switchholderon {
+  0% {left: 0px;}
+  100% {left: 20px;}
+}
+
+@keyframes switchholderoff {
+  0% {left: 20px;}
+  100% {left: 0px;}
+}
+
+@media screen and (max-width: 1000px){
+  .Holder {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .ForMobile {
+    display: inline;
   }
 }
